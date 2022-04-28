@@ -5,9 +5,19 @@ export const InputTodo = (props) => {
   // propsはオブジェクトとして渡される
   // 下記は親から渡されたpropsを分割代入する
   const { todoText, onChange, onClick } = props;
+  // jsxのルールに従ってcss実装
+  const style = {
+    backgroundColor: "#c1ffff",
+    width: "400px",
+    height: "30px",
+    borderRadius: "8px",
+    padding: "8px",
+    margin: "8px"
+  };
+
   return (
     <>
-      <div className="input-area">
+      <div style={style} className="input-area">
         <input placeholder="TODOを入力" value={todoText} onChange={onChange} />
         <button onClick={onClick}>追加</button>
       </div>
