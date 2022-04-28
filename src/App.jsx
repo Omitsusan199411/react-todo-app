@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "./styles.css";
 
 export const App = () => {
+  // 入力フォーム State
   const [todoText, setTodoText] = useState(``);
   // 未完了TODO State
-  const [incompleteTodos, setIncompleteTodos] = useState(["あああ", "いいい"]);
+  const [incompleteTodos, setIncompleteTodos] = useState([]);
   // 完了TODO State
-  const [completeTodos, setCompleteTodos] = useState(["ううう"]);
+  const [completeTodos, setCompleteTodos] = useState([]);
   const onChangeTodoText = (event) => setTodoText(event.target.value);
   // 追加ボタン機能
   const onClickAdd = () => {
